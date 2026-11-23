@@ -1,0 +1,88 @@
+{
+  "dataset": "SMSSpamCollection",
+  "rows_after_cleaning": 5158,
+  "class_counts": {
+    "ham": 4516,
+    "spam": 642
+  },
+  "split_sizes": {
+    "train": 3300,
+    "validation": 826,
+    "test": 1032
+  },
+  "random_state": 42,
+  "selected_model_by_validation_spam_f1": "Linear SVM (calibrated)",
+  "validation_metrics_by_model": {
+    "Logistic Regression": {
+      "accuracy": 0.9854721549636803,
+      "spam_precision": 0.9789473684210527,
+      "spam_recall": 0.9029126213592233,
+      "spam_f1": 0.9393939393939394,
+      "threshold": 0.24000000000000005
+    },
+    "Multinomial Naive Bayes": {
+      "accuracy": 0.9721549636803875,
+      "spam_precision": 0.9878048780487805,
+      "spam_recall": 0.7864077669902912,
+      "spam_f1": 0.8756756756756757,
+      "threshold": 0.2
+    },
+    "Linear SVM (calibrated)": {
+      "accuracy": 0.9878934624697336,
+      "spam_precision": 0.979381443298969,
+      "spam_recall": 0.9223300970873787,
+      "spam_f1": 0.95,
+      "threshold": 0.5400000000000003
+    }
+  },
+  "threshold_by_model": {
+    "Logistic Regression": 0.24000000000000005,
+    "Multinomial Naive Bayes": 0.2,
+    "Linear SVM (calibrated)": 0.5400000000000003
+  },
+  "selected_spam_threshold": 0.5400000000000003,
+  "test_metrics_at_selected_threshold": {
+    "accuracy": 0.9854651162790697,
+    "spam_precision": 0.952,
+    "spam_recall": 0.9296875,
+    "spam_f1": 0.9407114624505929
+  },
+  "test_confusion_matrix_labels_ham_spam": [
+    [
+      898,
+      6
+    ],
+    [
+      9,
+      119
+    ]
+  ],
+  "test_classification_report": {
+    "ham": {
+      "precision": 0.9900771775082691,
+      "recall": 0.9933628318584071,
+      "f1-score": 0.9917172832689122,
+      "support": 904.0
+    },
+    "spam": {
+      "precision": 0.952,
+      "recall": 0.9296875,
+      "f1-score": 0.9407114624505929,
+      "support": 128.0
+    },
+    "accuracy": 0.9854651162790697,
+    "macro avg": {
+      "precision": 0.9710385887541345,
+      "recall": 0.9615251659292036,
+      "f1-score": 0.9662143728597525,
+      "support": 1032.0
+    },
+    "weighted avg": {
+      "precision": 0.9853544268095691,
+      "recall": 0.9854651162790697,
+      "f1-score": 0.9853909799116013,
+      "support": 1032.0
+    }
+  },
+  "important_caveat": "Metrics are estimates on a held-out split of this SMS dataset. They do not guarantee performance on newer scams, other languages, or long-form emails. The displayed score may not be perfectly calibrated."
+}
